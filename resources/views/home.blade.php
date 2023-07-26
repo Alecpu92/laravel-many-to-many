@@ -33,6 +33,8 @@
         <ul>
             @foreach($user -> technologies as $technology)
             <li>
+            <a href="{{ route('technology.show', $technology -> id) }}">
+    
                 {{techonlogy -> name}}
             </li>
             @endforeach
