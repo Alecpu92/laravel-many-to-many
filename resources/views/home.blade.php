@@ -29,6 +29,14 @@
                 </li>
             @endforeach
         </ul>
+        <h5>Technologies: {{ count($user -> technologies) }}</h5>
+        <ul>
+            @foreach($user -> technologies as $technology)
+            <li>
+                {{techonlogy -> name}}
+            </li>
+            @endforeach
+        </ul>
     </div>
 
 @endsection
