@@ -18,11 +18,5 @@ Route :: get('/create', [LoggedController :: class, 'create'])
 Route :: post('/store', [LoggedController :: class, 'store'])
     -> middleware(['auth'])
     -> name('project.store');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-require __DIR__.'/auth.php';
+Route :: get('/technologies/{id}', [TechnologyContoroller :: class, 'show'])
+-> name ('technology.show');
